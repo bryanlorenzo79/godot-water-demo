@@ -97,49 +97,11 @@ operator = 2
 code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
 
-uniform sampler2D tex_vtx_4;
 uniform vec4 ColorParameter : source_color = vec4(0.000000, 0.266667, 0.533333, 1.000000);
 uniform sampler2D tex_frg_3;
 uniform sampler2D tex_frg_7;
 
 
-
-void vertex() {
-// Input:2
-	float n_out2p0 = TIME;
-
-
-// UVFunc:3
-	vec2 n_in3p1 = vec2(0.10000, 0.10000);
-	vec2 n_out3p0 = vec2(n_out2p0) * n_in3p1 + UV;
-
-
-// Texture2D:4
-	vec4 n_out4p0 = texture(tex_vtx_4, n_out3p0);
-
-
-// Input:5
-	vec3 n_out5p0 = NORMAL;
-
-
-// VectorOp:8
-	vec3 n_in8p1 = vec3(0.20000, 0.20000, 0.20000);
-	vec3 n_out8p0 = n_out5p0 * n_in8p1;
-
-
-// Input:6
-	vec3 n_out6p0 = VERTEX;
-
-
-// MultiplyAdd:7
-	vec4 n_out7p0 = (n_out4p0 * vec4(n_out8p0, 0.0)) + vec4(n_out6p0, 0.0);
-
-
-// Output:0
-	VERTEX = vec3(n_out7p0.xyz);
-
-
-}
 
 void fragment() {
 // ColorParameter:2
@@ -202,7 +164,7 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-771.867, -31.1143)
+graph_offset = Vector2(-155.092, 45.1048)
 nodes/vertex/0/position = Vector2(480, 160)
 nodes/vertex/2/node = SubResource("VisualShaderNodeInput_1uv6y")
 nodes/vertex/2/position = Vector2(-320, 260)
@@ -218,7 +180,7 @@ nodes/vertex/7/node = SubResource("VisualShaderNodeMultiplyAdd_tya5q")
 nodes/vertex/7/position = Vector2(280, 300)
 nodes/vertex/8/node = SubResource("VisualShaderNodeVectorOp_5q1e4")
 nodes/vertex/8/position = Vector2(20, 460)
-nodes/vertex/connections = PackedInt32Array(2, 0, 3, 2, 3, 0, 4, 0, 4, 0, 7, 0, 6, 0, 7, 2, 7, 0, 0, 0, 5, 0, 8, 0, 8, 0, 7, 1)
+nodes/vertex/connections = PackedInt32Array(2, 0, 3, 2, 3, 0, 4, 0, 4, 0, 7, 0, 6, 0, 7, 2, 5, 0, 8, 0, 8, 0, 7, 1)
 nodes/fragment/0/position = Vector2(560, 140)
 nodes/fragment/2/node = SubResource("VisualShaderNodeColorParameter_sts0n")
 nodes/fragment/2/position = Vector2(-120, -20)
