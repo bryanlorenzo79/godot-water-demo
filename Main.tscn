@@ -94,7 +94,6 @@ text = "water test for sub gambit game."
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
-visible = false
 mesh = SubResource("PlaneMesh_uu6xs")
 surface_material_override/0 = SubResource("ShaderMaterial_r0du0")
 
