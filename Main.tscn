@@ -32,6 +32,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, -0.809557, 1), Vector3(0, -1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sub:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.3, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.0872665), Vector3(0, 0, -0.0872665), Vector3(0, 0, 0), Vector3(0, 0, 0.0523599)]
+}
 
 [sub_resource type="Animation" id="Animation_r0du0"]
 length = 0.001
@@ -46,6 +58,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0, -0.809557, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sub:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cm0pq"]
@@ -83,7 +107,7 @@ transform = Transform3D(0.98525, -0.17085, -0.00963315, 0.00282273, -0.04006, 0.
 shadow_enabled = true
 
 [node name="sub" parent="." instance=ExtResource("2_uu6xs")]
-transform = Transform3D(1, 0, 0, 0, 0.999378, 0.0352617, 0, -0.0352617, 0.999378, 0, -0.809557, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.809557, 1)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
