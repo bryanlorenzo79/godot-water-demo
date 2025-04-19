@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://c37vhtcyw10in" path="res://sub.gltf" id="2_uu6xs"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uu6xs"]
-size = Vector2(80, 80)
-subdivide_width = 160
-subdivide_depth = 160
+size = Vector2(24, 24)
+subdivide_width = 16
+subdivide_depth = 16
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r0du0"]
 render_priority = 0
@@ -14,7 +14,7 @@ shader = ExtResource("1_glv2v")
 shader_parameter/ColorParameter = Color(0, 0.266667, 0.533333, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_r0du0"]
-size = Vector2(80, 80)
+size = Vector2(14, 14)
 
 [node name="Node3D" type="Node3D"]
 
@@ -36,14 +36,15 @@ mesh = SubResource("PlaneMesh_uu6xs")
 surface_material_override/0 = SubResource("ShaderMaterial_r0du0")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.510858, 0.859665, 0, -0.859665, 0.510858, 0, 10.6634, 6.76929)
+transform = Transform3D(1, 0, 0, 0, 0.549985, 0.835174, 0, -0.835174, 0.549985, 0, 15.2512, 11.6167)
+fov = 35.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.965926, -0.12941, -0.224144, 0.258819, 0.482963, 0.836516, 0, -0.866025, 0.5, 0, 14, 0)
+transform = Transform3D(0.98525, -0.17085, -0.00963315, 0.00282273, -0.04006, 0.999193, -0.171098, -0.984482, -0.0389868, 0, 5.9662, 4.43963)
 shadow_enabled = true
 
 [node name="sub" parent="." instance=ExtResource("2_uu6xs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.809557, 1)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
